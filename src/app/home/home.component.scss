@@ -1,0 +1,65 @@
+@import '../../assets/sass/tools/functions';
+@import '../../assets/sass/settings/colors';
+@import '../../assets/sass/tools/mixins';
+
+.sw-home-container {
+    display: flex;
+    flex-direction: column;
+
+    .sw-card-container {
+        margin-bottom: sp(2);
+
+        sw-pet-card {
+            margin: sp(1) 0;
+            
+            
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include sm {
+            flex-direction: row;
+            flex-basis: calc(50% - 16px);
+            margin: sp(1);
+            }
+            
+            @include xl {
+                margin: sp(1);
+                flex-basis: calc(25% - 16px);
+            }   
+        }
+    }
+
+    .sw-home-buttons__button,
+    .sw-pet-card__button {
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        border-radius: 3px;
+        color: $color-white;
+        cursor: pointer;
+        font-size: .875rem;
+        height: sp(4);
+        padding: 0 sp(2);
+        outline: none;
+        margin: sp(1);
+
+        &:hover {
+            background-color: $color-button-hover;
+            border-color: $color-button-hover;
+        }
+
+        &:disabled {
+        background-color: $color-gray-disabled-button;
+        border-color: $color-gray-disabled-button;
+        box-shadow: none;
+        cursor: default;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+
+
+}

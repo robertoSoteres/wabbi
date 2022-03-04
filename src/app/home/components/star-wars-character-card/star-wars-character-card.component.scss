@@ -1,0 +1,67 @@
+@import '../../../../assets/sass/settings/colors';
+@import '../../../../assets/sass/tools/functions';
+@import '../../../../assets/sass/tools/mixins';
+
+.sw-character-card {
+  border: 1px solid $color-stone;
+  border-radius: 6px;
+  box-shadow: 0px 1px 3px 1px $color-shadow;
+  background-color: $color-white;
+  padding: sp(1);
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin: sp(1) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: sp(1);
+    align-items: center;
+    flex-direction: column;
+
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    min-width: 150px;
+    width: 100%;
+    margin-bottom: sp(1);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+    display: block;
+    background: url("/assets/images/eye-solid.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    }
+  }
+}

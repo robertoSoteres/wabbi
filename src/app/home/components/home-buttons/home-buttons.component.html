@@ -1,0 +1,10 @@
+<div class="sw-home-buttons">
+  <div class="sw-home-buttons__pagination">
+    <button (click)="prevPetsPage()" class="sw-home-buttons__button" [disabled]="!prevPageExist">
+      << 
+    </button>
+    <button (click)="nextPetsPage()" class="sw-home-buttons__button" [disabled]="!nextPageExist">
+      >>
+    </button>
+  </div>
+</div>

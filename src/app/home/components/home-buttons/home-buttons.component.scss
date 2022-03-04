@@ -1,0 +1,24 @@
+@import '../../../../assets/sass/tools/functions';
+@import '../../../../assets/sass/settings/colors';
+@import '../../../../assets/sass/tools/mixins';
+
+.sw-home-buttons {
+        display: flex;
+        flex-direction: column;
+        
+        @include sm {
+            flex-direction: row;
+            justify-content: space-between;
+        }   
+
+        &__pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            @include sm {
+                justify-content: start;
+                margin-left: sp(1);
+            }   
+        }
+    }
